@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cupcakes</title>
+    
+</head>
+<body>
+<h1>List Of Cupcakes</h1>
+<ul id="cupcake-list"></ul>
+<h2>Add a cupcake</h2>
+
+<form id="new-cupcake">
+    <div>
+        <label for="form-flavor">Flavor: </label>
+        <input name="flavor" id="form-flavor">
+    </div>
+    <br>
+    <div>
+        <label for="form-size">Size: </label>
+        <input name="size" id="form-size">
+    </div>
+    <br>
+    <div>
+        <label for="form-rating">Rating: </label>
+        <input type="number" name="Rating" id="form-rating">
+    </div>
+    <br>
+    <div>
+        <label for="form-image">Image URL: </label>
+        <input name="image" id="form-image">
+    </div>
+    <br>
+    <button >Add</button>
+
+</form>
+<script src="https://unpkg.com/jquery"></script>
+<script src="https://unpkg.com/axios@0.19.0/dist/axios.js"></script>
+<script src="/sb_exercises/restful-api/static/cupcakes.js"></script>
+
+
+
+</body>
+</html>
