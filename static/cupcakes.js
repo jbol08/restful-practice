@@ -6,6 +6,16 @@ function generateCupcake(cupcake) {
         <img src="${cupcake.img}"> </div>`;
 }
 
+async function showCupcakes() {
+    const response = await axios.get('http://localhost:5000/api/cupcakes');
+  
+    for (let cupcakeData of response.data.cupcakes) {
+      let newCupcake = $(generateCupcake(cupcakeData));
+      $("#cupcakes-list").append(newCupcake);
+    }
+  }
+  
+
 
 $('#new-cupcake').on('submit', async function (event) {
     event.preventDefault();
@@ -22,6 +32,8 @@ $('#new-cupcake').on('submit', async function (event) {
     $('#new-cupcake').trigger('reset');
 });
 
+
+
 $('#cupcake-list').on('click', ".delete-button", async function (event) {
     event.preventDefault();
 
@@ -31,4 +43,8 @@ $('#cupcake-list').on('click', ".delete-button", async function (event) {
     await axios.delete(`http://localhost:5000/api/${cupcakeId}`);
     $cupcake.remove();
 });
+
+$(showCupcakes);
+
+
 

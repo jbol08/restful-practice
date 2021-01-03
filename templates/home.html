@@ -8,7 +8,9 @@
 </head>
 <body>
 <h1>List Of Cupcakes</h1>
-<ul id="cupcake-list"></ul>
+<ul id="cupcake-list"> 
+
+</ul>
 <h2>Add a cupcake</h2>
 
 <form id="new-cupcake">
@@ -37,7 +39,8 @@
 </form>
 <script src="https://unpkg.com/jquery"></script>
 <script src="https://unpkg.com/axios@0.19.0/dist/axios.js"></script>
-<script src="/sb_exercises/restful-api/static/cupcakes.js"></script>
+
+<script src="{{url_for('static', filename='cupcakes.js')}}"></script>
 
 
 
